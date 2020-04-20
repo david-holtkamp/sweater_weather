@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'I can receive a forecast for a city' do
-  it 'returns all necessary info based on wireframes', :vcr do
+  xit 'returns all necessary info based on wireframes', :vcr do
 
     # get '/api/v1/forecast?location=kauai,hi', headers: {
     get '/api/v1/forecast?location=denver,co', headers: {
