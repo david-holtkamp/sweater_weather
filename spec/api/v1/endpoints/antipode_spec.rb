@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'I can find antipode city of Hong Kong' do
-  it 'returns all necessary info based on spec' do
+  it 'returns all necessary info based on spec', :vcr do
 
     get '/api/v1/antipode?location=Hong Kong', headers: {
       'Content-Type' => 'application/json',
@@ -10,7 +10,7 @@ RSpec.describe 'I can find antipode city of Hong Kong' do
     expect(response).to be_successful
 
     city_info = JSON.parse(response.body, symbolize_names: true)[:data][:attributes]
-    
+
     expect(city_info[:location_name]).to be_a String
     expect(city_info[:location_name]).to eq("Ruta Provincial 69")
     expect(city_info[:forecast].keys).to eq([:summary, :current_temperature])
