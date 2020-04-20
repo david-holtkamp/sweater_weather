@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'I can receive a background image for a city' do
-  xit 'returns an appropriate url', :vcr do
+  it 'returns an appropriate url', :vcr do
 
     get '/api/v1/backgrounds?location=denver,co', headers: {
       'Content-Type' => 'application/json',
@@ -13,7 +13,7 @@ RSpec.describe 'I can receive a background image for a city' do
     expect(background_image[:background_image]).to be_a String
   end
 
-  xit 'returns a default image if none are returned', :vcr do
+  it 'returns a default image if none are returned', :vcr do
 
     get '/api/v1/backgrounds?location=cleveland,oh', headers: {
       'Content-Type' => 'application/json',
