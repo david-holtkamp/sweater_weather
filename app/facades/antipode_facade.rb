@@ -4,9 +4,11 @@ class AntipodeFacade
   def initialize(search_location)
     @id = nil
     @search_location = search_location
-    @amypode_service = AmypodeService.new(search_location_lat_long).antipode_data
+    search_location_coords = find_search_location_lat_long
+    @amypode_service = AmypodeService.new(search_location_coords).antipode_data
     @antipode_location_data = GoogleService.new(antipode_city_lat_long).location_data
     @antipode_weather_data = OpenWeatherService.new(antipode_city_lat_long).forecast_data
+    # @forecast = Forecast.new(@antipode_weather_data)
   end
 
   def location_name
@@ -14,13 +16,15 @@ class AntipodeFacade
   end
 
   def forecast
+      # Forecast.new(@antipode_weather_data)
+
     {
       summary: @antipode_weather_data[0][:current][:weather][0][:description],
       current_temperature: @antipode_weather_data[0][:current][:temp].round
     }
   end
 
-  def search_location_lat_long
+  def find_search_location_lat_long
     response = GoogleService.new(@search_location).geocode_data
     response[:geometry][:location]
   end
