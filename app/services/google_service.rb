@@ -4,6 +4,17 @@ class GoogleService
     @location = location
   end
 
+  def lat_long
+    "#{@location[:lat]},#{@location[:long]}"
+  end
+
+  def location_data
+    response = conn.get('maps/api/geocode/json') do |req|
+      req.params['latlng'] = lat_long
+    end
+    JSON.parse(response.body, symbolize_names: true)[:results][0]
+  end
+
   def geocode_data
     response = conn.get('maps/api/geocode/json') do |req|
       req.params['address'] = @location
