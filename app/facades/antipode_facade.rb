@@ -9,7 +9,7 @@ class AntipodeFacade
   end
 
   def antipode_city
-
+    @antipode_location_data[:address_components][0][:long_name]
   end
 
   def current_weather
