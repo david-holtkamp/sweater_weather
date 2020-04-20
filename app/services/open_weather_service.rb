@@ -1,9 +1,10 @@
 class OpenWeatherService
 
   def initialize(coordinates)
-    @latitude = coordinates[:lat]
-    @longitude = coordinates[:lng]
+    @latitude = coordinates.values[0]
+    @longitude = coordinates.values[1]
   end
+
 
   def forecast_data
     response = conn.get('data/2.5/onecall') do |req|
