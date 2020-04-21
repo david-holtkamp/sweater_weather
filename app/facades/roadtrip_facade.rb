@@ -14,12 +14,14 @@ class RoadtripFacade
   end
 
   def arrival_forecast
+    roadtrip_forecast
+  end
+
+  def roadtrip_forecast
     future_index = travel_time_rounded + 1
     future_forecast = @open_weather_service.first[:hourly][future_index]
-    {
-      temp: future_forecast[:temp],
-      summary: future_forecast[:weather][0][:description]
-    }
+
+    RoadtripForecast.new(future_forecast)
   end
 
   private

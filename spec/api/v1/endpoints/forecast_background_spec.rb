@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'I can receive a background image for a city' do
+RSpec.describe 'I can receive a background image for a city', :type => :request do
   it 'returns an appropriate url', :vcr do
 
     get '/api/v1/backgrounds?location=denver,co', headers: {
