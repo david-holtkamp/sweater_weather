@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'I can receive a forecast for a city', :type => :request do
-  it 'returns all necessary info based on wireframes', :vcr do
+  it 'returns all necessary info based on wireframes' do
 
     # get '/api/v1/forecast?location=kauai,hi', headers: {
     get '/api/v1/forecast?location=denver,co', headers: {
@@ -14,7 +14,7 @@ RSpec.describe 'I can receive a forecast for a city', :type => :request do
 
     expect(forecast[:forecast_location]).to be_a String
     expect(forecast[:current_forecast].length).to eq(1)
-    expect(forecast[:current_forecast][0].keys).to eq([:datetime, :feels_like, :humidity, :visibility, :uv_index, :temp, :description, :icon, :high, :low, :sunrise, :sunset])
+    expect(forecast[:current_forecast][0].keys).to eq([:datetime, :feels_like, :humidity, :uv_index, :temp, :description, :icon, :high, :low, :sunrise, :sunset])
     expect(forecast[:daily_forecast].length).to eq(5)
     expect(forecast[:daily_forecast][0].keys).to eq([:day, :icon, :summary, :precipitation, :high, :low])
     expect(forecast[:hourly_forecast].length).to eq(8)
