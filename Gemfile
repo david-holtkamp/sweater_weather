@@ -33,6 +33,7 @@ gem 'fast_jsonapi'
 gem 'rubocop', '~> 0.79.0', require: false
 gem 'factory_bot_rails'
 gem 'bcrypt'
+gem 'travis'
 
 
 group :development, :test do
