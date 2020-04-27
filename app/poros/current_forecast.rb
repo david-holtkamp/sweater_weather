@@ -4,7 +4,7 @@ class CurrentForecast
     @datetime = Time.at(forecast_data[:current][:dt]).strftime("%B %e %I:%M%p")
     @feels_like = forecast_data[:current][:feels_like]
     @humidity = forecast_data[:current][:humidity]
-    @visibility = (forecast_data[:current][:visibility] / 1609.344).round
+    # @visibility = (forecast_data[:current][:visibility] / 1609.344).round
     @uv_index = forecast_data[:current][:uvi]
     @temp = forecast_data[:current][:temp]
     @description = forecast_data[:current][:weather][0][:description]

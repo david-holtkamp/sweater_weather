@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Apr 2020 02:48:51 GMT
+      - Mon, 27 Apr 2020 21:37:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,10 +29,10 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d71b4cd6b55359e46e9cb75b56496cc671587331817; expires=Tue, 19-May-20
-        21:30:17 GMT; path=/; domain=.pexels.com; HttpOnly; SameSite=Lax
-      - __cfduid=df72615853c90359c8fcbf2eee569c07d1587350931; expires=Wed, 20-May-20
-        02:48:51 GMT; path=/; domain=.pexels.com; HttpOnly; SameSite=Lax
+      - __cfduid=d136754f2fb1d87fbf5d8916809f225f31588023442; expires=Wed, 27-May-20
+        21:37:22 GMT; path=/; domain=.pexels.com; HttpOnly; SameSite=Lax
+      - __cfduid=db53f9090880dccd9982ce3231a4fff131588023442; expires=Wed, 27-May-20
+        21:37:22 GMT; path=/; domain=.pexels.com; HttpOnly; SameSite=Lax
       Alt-Svc:
       - h3-27=":443"; ma=86400, h3-25=":443"; ma=86400, h3-24=":443"; ma=86400, h3-23=":443";
         ma=86400
@@ -41,7 +41,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 0237161f570000f79091354200000001
+      - 025f2bd3ec0000f784b51ad200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Vary:
@@ -51,25 +51,23 @@ http_interactions:
       X-Ratelimit-Limit:
       - '20000'
       X-Ratelimit-Remaining:
-      - '19975'
+      - '19972'
       X-Ratelimit-Reset:
       - '1589850560'
       X-Request-Id:
-      - 8e93608a-49ab-4888-865d-eb4c7b2b4102
+      - c78e1c4f-d4dc-4ff6-8e87-8d3888753a68
       X-Runtime:
-      - '0.160425'
-      X-Tyk-Cached-Response:
-      - '1'
+      - '0.048112'
       Accept-Ranges:
       - bytes
       Server:
       - cloudflare
       Cf-Ray:
-      - 586b8c788bb1f790-DEN
+      - 58abaf331ad2f784-DEN
     body:
       encoding: ASCII-8BIT
-      string: '{"total_results":12,"page":1,"per_page":1,"photos":[{"id":2706750,"width":6240,"height":4160,"url":"https://www.pexels.com/photo/union-station-building-2706750/","photographer":"Thomas
+      string: '{"total_results":14,"page":1,"per_page":1,"photos":[{"id":2706750,"width":6240,"height":4160,"url":"https://www.pexels.com/photo/union-station-building-2706750/","photographer":"Thomas
         Ward","photographer_url":"https://www.pexels.com/@thomasleeward","photographer_id":220769,"src":{"original":"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg","large2x":"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","large":"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&h=650&w=940","medium":"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&h=350","small":"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&h=130","portrait":"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800","landscape":"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200","tiny":"https://images.pexels.com/photos/2706750/pexels-photo-2706750.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"},"liked":false}],"next_page":"https://api.pexels.com/v1/search/?page=2&per_page=1&query=denver"}'
     http_version: null
-  recorded_at: Mon, 20 Apr 2020 02:48:51 GMT
+  recorded_at: Mon, 27 Apr 2020 21:37:22 GMT
 recorded_with: VCR 5.1.0
