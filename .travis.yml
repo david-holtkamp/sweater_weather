@@ -9,8 +9,6 @@ before_install:
 script:
  — bundle install --jobs=3 --retry=3 --deployment
  — bundle exec rails db:migrate RAILS_ENV=test
- # - bundle exec rails webpacker:install
- # - RAILS_ENV=test bundle exec rails webpacker:compile
  — bundle exec rspec
 services:
  — postgresql
