@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'I can create a road trip', :type => :request do
-  it 'can take in road trip info and return travel time and arrival forecast' do
+  it 'can take in road trip info and return travel time and arrival forecast', :vcr do
     user = User.create({
       email: "test@example.com",
       password: "password",
@@ -33,7 +33,7 @@ describe 'I can create a road trip', :type => :request do
     expect(road_trip[:arrival_forecast][:summary]).to be_a String
   end
 
-  it 'will not take in road trip info without a valid API key' do
+  it 'will not take in road trip info without a valid API key', :vcr do
     post '/api/v1/road_trip', params: {
         origin: "Denver,CO",
         destination: "Pueblo,CO"
