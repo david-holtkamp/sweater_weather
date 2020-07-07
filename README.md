@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+Sweater Weather is back-end Rails API designed to serve weather and trip information to a front-end app. It consumes 4 different APIs and exposes data to help road-trippers plan for weather given a destination and estimated arrival time. The application consumes:
 
-* Ruby version
+- OpenWeather API for weather forecasts and prediction data
+- Google Geocode API for latitude & longitude of trip origin and destination inputs
+- Google Directions API to pull trip travel time for forecast predictions
+- Pexel API for relevant photos of trip
 
-* System dependencies
+## Technologies & Architecture
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Framework: Ruby on Rails
+- Testing: RSpec
+- Deployment: Heroku
+- CI/CD: TravisCI
+- JSON Serializer: FastJsonAPI
+- 3rd Party APIs:
+  - Google Direction Matrix API
+  - Google Geocoding API
+  - Pexel API
+  - OpenWeather API
+- Response Caching: VCR & Webmock
+- Linting: Rubocop
+- Test Coverage: SimpleCov
