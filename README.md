@@ -13,8 +13,6 @@ Sweater Weather is back-end Rails API designed to serve weather and trip informa
 
 - Framework: Ruby on Rails
 - Testing: RSpec
-- Deployment: Heroku
-- CI/CD: TravisCI
 - JSON Serializer: FastJsonAPI
 - 3rd Party APIs:
   - Google Direction Matrix API
