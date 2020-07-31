@@ -194,3 +194,68 @@ Response example:
     }
 }
 ```
+
+### Users
+
+Submit a user's email, password, and password confirmation to create that user in the database and receive a unique API key for the user.
+
+POST Request Body Parameter(s):
+- `email`, which is a string value and must be unique in the database.
+- `password`, which is a string value.
+- `password_confirmation`, which is a string value and must be present and match the `password`.
+
+Endpoint:
+```
+/users
+```
+
+HTTP Request example:
+```
+POST http://localhost:3000/api/v1/users
+```
+Headers example:
+```
+Content-Type: application/json
+Accept: application/json
+```
+Body example:
+```json
+{
+  "email": "email@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+```
+
+Response example:
+```json
+{
+    "data": {
+        "id": "8",
+        "type": "user",
+        "attributes": {
+            "email": "david100@example.com",
+            "api_key": "3AHFvE8ShN8XKGEGee1BphDy"
+        }
+    }
+}
+```
+
+If there is a problem with the parameters provided, a JSON:API error object will be returned containing details about which parameter caused the error.
+
+Error example:
+```json
+{
+    "errors": [
+        {
+            "status": "400",
+            "source": {
+                "pointer": "/api/v1/users",
+                "parameter": "email, password_confirmation"
+            },
+            "title": "Invalid Request",
+            "detail": "Email has already been taken, Password confirmation doesn't match Password."
+        }
+    ]
+}
+```
