@@ -164,3 +164,33 @@ Response example:
     }
 }
 ```
+
+### Backgrounds
+
+Retrieve a background image URL from Unsplash for a given city, which can be resized to fit one's needs.
+
+Endpoint:
+```
+/backgrounds
+```
+
+Query Parameter(s):
+- `location`, which should be a string containing a city and state, comma-separated (e.g., "denver,co").
+
+HTTP Request Example:
+```
+GET http://localhost:3000/api/v1/backgrounds?location=denver,co
+```
+
+Response example:
+```json
+{
+    "data": {
+        "id": null,
+        "type": "background",
+        "attributes": {
+            "background_image": "https://www.pexels.com/photo/union-station-building-2706750/"
+        }
+    }
+}
+```
